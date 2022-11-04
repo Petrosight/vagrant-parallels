@@ -445,6 +445,7 @@ module VagrantPlugins
           }
           return nil unless iso_name[guest_os]
 
+          #if @machine.provider_config.update_guest_tools
           bundle_id = 'com.parallels.desktop.console'
           bundle_path = execute('mdfind', "kMDItemCFBundleIdentifier == #{bundle_id}")
           iso_path = File.expand_path("./Contents/Resources/Tools/#{iso_name[guest_os]}",
