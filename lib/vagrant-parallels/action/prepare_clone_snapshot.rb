@@ -19,6 +19,12 @@ module VagrantPlugins
             return @app.call(env)
           end
 
+          if Util::Common::is_macvm(env[:machine])
+            #Ignore, since macvms doesn't support snapshot creation
+            @logger.info('Snapshot creation is not supported yet for macOS ARM Guests, skip snapshot preparing')
+            return @app.call(env)
+          end
+
           # If we're not doing a linked clone, snapshots don't matter
           if !env[:machine].provider_config.linked_clone
             return @app.call(env)

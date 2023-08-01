@@ -1,3 +1,35 @@
+## 2.4.0 (May 22, 2023)
+IMPROVEMENTS:
+  - Implement shared folder support for `.macvm` VMs
+  [[GH-448](https://github.com/Parallels/vagrant-parallels/pull/448)]
+
+BUG FIXES:
+  - Fix shared folder mount error on `.macvm` VMs
+  [[GH-445](https://github.com/Parallels/vagrant-parallels/pull/445)]
+
+## 2.3.1 (March 23, 2023)
+BUG FIXES:
+  - Fix the detection of VM IP. Wait for the IP to become available to
+  avoid connection issues and Vagrant warnings.
+  [[GH-440](https://github.com/Parallels/vagrant-parallels/issues/440)]
+
+## 2.3.0 (March 22, 2023)
+IMPROVEMENTS:
+  - Support fetching the VM IP using prlctl
+  [[GH-434](https://github.com/Parallels/vagrant-parallels/pull/434)].
+  - Update gem dependensies and support Ruby 3.0
+  [[GH-437](https://github.com/Parallels/vagrant-parallels/pull/437)],
+  [[GH-439](https://github.com/Parallels/vagrant-parallels/pull/439)].
+
+BUG FIXES:
+  - Fixes SSH access to `.macvm` VMs on Macs with Apple M-series chip
+  [[GH-435](https://github.com/Parallels/vagrant-parallels/issues/435)]
+
+## 2.2.6 (December 19, 2022)
+BUG FIXES:
+  - Fix the macOS VMs support on ARM-based Mac
+  [[GH-429](https://github.com/Parallels/vagrant-parallels/pull/429)]
+
 ## 2.2.5 (February 22, 2022)
 BUG FIXES:
   - Fixed Parallels Tool installation on M1 hosts with arm64
