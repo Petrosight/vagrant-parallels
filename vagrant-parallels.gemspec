@@ -1,30 +1,38 @@
-# coding: utf-8
-$:.unshift File.expand_path('../lib', __FILE__)
-require 'vagrant-parallels/version'
+# -*- encoding: utf-8 -*-
+# stub: vagrant-parallels 2.4.0 ruby lib
 
-Gem::Specification.new do |spec|
-  spec.name          = 'vagrant-parallels'
-  spec.version       = VagrantPlugins::Parallels::VERSION
-  spec.platform      = Gem::Platform::RUBY
-  spec.authors       = ['Mikhail Zholobov', 'Youssef Shahin']
-  spec.email         = ['legal90@gmail.com', 'yshahin@gmail.com']
-  spec.summary       = %q{Parallels provider for Vagrant.}
-  spec.description   = %q{Enables Vagrant to manage Parallels virtual machines.}
-  spec.homepage      = 'https://github.com/Parallels/vagrant-parallels'
-  spec.license       = 'MIT'
+Gem::Specification.new do |s|
+  s.name = "vagrant-parallels".freeze
+  s.version = "2.4.0"
 
-  spec.required_rubygems_version = '>= 1.3.6'
-  spec.rubyforge_project         = 'vagrant-parallels'
+  s.required_rubygems_version = Gem::Requirement.new(">= 1.3.6".freeze) if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib".freeze]
+  s.authors = ["Mikhail Zholobov".freeze, "Youssef Shahin".freeze]
+  s.date = "2023-05-22"
+  s.description = "Enables Vagrant to manage Parallels virtual machines.".freeze
+  s.email = ["legal90@gmail.com".freeze, "yshahin@gmail.com".freeze]
+  s.homepage = "https://github.com/Parallels/vagrant-parallels".freeze
+  s.licenses = ["MIT".freeze]
+  s.rubygems_version = "3.3.26".freeze
+  s.summary = "Parallels provider for Vagrant.".freeze
 
-  spec.add_dependency 'nokogiri'
+  s.installed_by_version = "3.3.26" if s.respond_to? :installed_by_version
 
-  # Constraint rake to properly handle deprecated method usage
-  # from within rspec
-  spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'rspec', '~> 3.11'
-  spec.add_development_dependency 'rspec-its', '~> 1.3.0'
-  spec.add_development_dependency 'webrick', '~> 1.8.0'
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
+  end
 
-  spec.files = Dir['lib/**/*', 'locales/**/*', 'README.md', 'CHANGELOG.md', 'LICENSE.txt']
-  spec.require_path = 'lib'
+  if s.respond_to? :add_runtime_dependency then
+    s.add_runtime_dependency(%q<nokogiri>.freeze, [">= 0"])
+    s.add_development_dependency(%q<rake>.freeze, ["~> 13.0"])
+    s.add_development_dependency(%q<rspec>.freeze, ["~> 3.11"])
+    s.add_development_dependency(%q<rspec-its>.freeze, ["~> 1.3.0"])
+    s.add_development_dependency(%q<webrick>.freeze, ["~> 1.8.0"])
+  else
+    s.add_dependency(%q<nokogiri>.freeze, [">= 0"])
+    s.add_dependency(%q<rake>.freeze, ["~> 13.0"])
+    s.add_dependency(%q<rspec>.freeze, ["~> 3.11"])
+    s.add_dependency(%q<rspec-its>.freeze, ["~> 1.3.0"])
+    s.add_dependency(%q<webrick>.freeze, ["~> 1.8.0"])
+  end
 end
